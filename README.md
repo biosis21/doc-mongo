@@ -166,4 +166,10 @@ For running some script each time when you run mongo use .mongorc.js. This file 
  
 #### Updating
 
+```
+ > db.blog.update({ "topic": "The funny cat" }, { "topic": "The funny dog"})
+```
+
+If you need to update topic but you dont know how many topics in the collection. If you attempt to change this document you will recieve the error notification. The following step should be to pass the _id field in the first parameter of updat emethod, because _id is unique.
+
  
